@@ -1,0 +1,4 @@
+<h1>Salary Splitter</h1>
+<p>Calculate how much your salary should be split up by. Our default recommendation is 50/30/20.</p>
+<lib-salary-split-breakdown *ngIf="salarySplitBreakdown" [splitBreakdown]="salarySplitBreakdown"/>
+<lib-salary-splitter-input-form (salarySplitterSubmit)="salarySplitterSubmit.emit($event)"/>

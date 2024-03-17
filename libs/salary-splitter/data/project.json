@@ -1,0 +1,36 @@
+{
+  "name": "salary-splitter-data",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/salary-splitter/data/src",
+  "prefix": "lib",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/salary-splitter/data/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/salary-splitter/data/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/salary-splitter/data/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/salary-splitter/data/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

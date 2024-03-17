@@ -1,0 +1,40 @@
+<h2>Salary Breakdown</h2>
+<div>
+  <h3>Monthly salary: {{ splitBreakdown.monthlySalary | currency : 'GBP' }}</h3>
+  <p>This is how much you get paid monthly</p>
+</div>
+<div>
+  <h3>
+    Essential spending: {{ splitBreakdown.essentialSplit | currency : 'GBP' }}
+  </h3>
+  <p>
+    This is how much you should limit to your essential spending. For example:
+  </p>
+  <ul>
+    <li>Rent</li>
+    <li>Electric, Gas bills</li>
+    <li>Food</li>
+    <li>Phone</li>
+  </ul>
+</div>
+<div>
+  <h3>
+    Non-essential spending:
+    {{ splitBreakdown.nonEssentialSplit | currency : 'GBP' }}
+  </h3>
+  <p>
+    This is how much you should limit to your non-essential spending. For
+    example:
+  </p>
+  <ul>
+    <li>Eating out</li>
+    <li>Netflix</li>
+  </ul>
+</div>
+<div>
+  <h3>Savings: {{ splitBreakdown.savingsSplit | currency : 'GBP' }}</h3>
+  <h3>
+    Yearly savings: {{ splitBreakdown.savingsSplit * 12 | currency : 'GBP' }}
+  </h3>
+  <p>This is how much you can save</p>
+</div>

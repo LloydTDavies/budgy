@@ -8,19 +8,26 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/budgy-web-app",
         "index": "apps/budgy-web-app/src/index.html",
         "browser": "apps/budgy-web-app/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/budgy-web-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/budgy-web-app/src/favicon.ico",
           "apps/budgy-web-app/src/assets"
         ],
-        "styles": ["apps/budgy-web-app/src/styles.scss"],
+        "styles": [
+          "@angular/material/prebuilt-themes/purple-green.css",
+          "apps/budgy-web-app/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -70,7 +77,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/budgy-web-app/jest.config.ts"
       }

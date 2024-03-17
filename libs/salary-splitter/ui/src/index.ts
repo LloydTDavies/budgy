@@ -1,0 +1,2 @@
+export { SalarySplitterInputFormComponent } from './lib/salary-splitter-input-form/salary-splitter-input-form.component';
+export { SalarySplitBreakdownComponent } from './lib/salary-split-breakdown/salary-split-breakdown.component';

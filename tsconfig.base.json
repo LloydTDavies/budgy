@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@budgy/house-budget-shell": ["libs/house-budget/shell/src/index.ts"],
+      "@budgy/salary-splitter-data": ["libs/salary-splitter/data/src/index.ts"],
+      "@budgy/salary-splitter-shell": [
+        "libs/salary-splitter/shell/src/index.ts"
+      ],
+      "@budgy/salary-splitter-ui": ["libs/salary-splitter/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,21 @@
+.salary {
+    display: flex;
+    margin-block-end: 2rem;
+    mat-form-field {
+        width:300px
+    }
+}
+.percentage-split {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+.suffix {
+    color: white;
+}
+
+.actions {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
