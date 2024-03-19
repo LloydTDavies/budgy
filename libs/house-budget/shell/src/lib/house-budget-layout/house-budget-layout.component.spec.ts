@@ -91,7 +91,7 @@ describe('HouseBudgetLayoutComponent', () => {
       expect(
         fixture.nativeElement.querySelector('lib-budget-list')
       ).toBeFalsy();
-      expect(letsCreateBudgetText.textContent).toEqual('Lets add a new budget');
+      expect(letsCreateBudgetText.textContent).toEqual('Lets add a new budget!');
       expect(createBudgetButton).toBeTruthy();
     });
   });
