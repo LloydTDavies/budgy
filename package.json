@@ -8,10 +8,10 @@
     "build": "nx run-many --target=build --all",
     "test": "nx run-many --target=test --all",
     "lint": "nx run-many --target=lint --all",
-    "affected:build": "npx nx affected -t build --base=main --head=HEAD",
-    "affected:test": "npx nx affected -t test --base=main --head=HEAD",
-    "affected:lint": "npx nx affected -t lint --base=main --head=HEAD",
-    "affected:e2e": "npx nx affected -t e2e --base=main --head=HEAD"
+    "affected:build": "npx nx affected -t build --base=main~1 --head=HEAD",
+    "affected:test": "npx nx affected -t test --base=main~1 --head=HEAD",
+    "affected:lint": "npx nx affected -t lint --base=main~1 --head=HEAD",
+    "affected:e2e": "npx nx affected -t e2e --base=main~1 --head=HEAD"
   },
   "private": true,
   "dependencies": {
