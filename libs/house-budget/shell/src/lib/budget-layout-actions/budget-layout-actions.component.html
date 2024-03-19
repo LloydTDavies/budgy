@@ -1,0 +1,26 @@
+<button
+mat-raised-button
+color="primary"
+[matMenuTriggerFor]="houseBudgetActions"
+data-role="actions-button"
+aria-label="House budget actions"
+>
+Actions
+</button>
+<mat-menu #houseBudgetActions="matMenu">
+<button
+  mat-menu-item
+  data-role="create-budget-menu-item"
+  (click)="createBudget.emit()"
+  aria-label="Create new budget"
+>
+  Create new budget
+</button>
+<button
+  mat-menu-item
+  data-role="save-budget-menu-item"
+  (click)="saveBudget.emit()"
+>
+  Save budget
+</button>
+</mat-menu>

@@ -1,0 +1,29 @@
+<h1>House budget</h1>
+
+<section id="budget-actions">
+  <lib-budget-layout-actions
+    (createBudget)="createBudget.emit()"
+    (saveBudget)="saveBudget.emit()"
+  />
+</section>
+@if (!showCreateBudget()) {
+<section>
+  @if (budgets().length > 0) {
+  <lib-budget-list />
+  } @else {
+  <h3>Lets add a new budget</h3>
+  <button
+    mat-raised-button
+    color="primary"
+    data-role="create-budget"
+    (click)="createBudget.emit()"
+  >
+    Create new budget
+  </button>
+  }
+</section>
+} @else {
+<section id="create-budget-stepper">
+  <lib-create-budget-stepper />
+</section>
+}

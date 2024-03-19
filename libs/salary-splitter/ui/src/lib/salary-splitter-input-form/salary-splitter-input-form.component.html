@@ -12,7 +12,9 @@
             id="monthly-salary-input"
           />
           <span matTextPrefix>£</span>
-          <mat-error *ngIf="form.controls['monthlySalary'].errors">Please enter a salary greater than 0.</mat-error>
+          @if(form.controls['monthlySalary'].errors) {
+          <mat-error>Please enter a salary greater than 0.</mat-error>
+          }
         </mat-form-field>
       </div>
       <div class="percentage-split">
@@ -50,15 +52,17 @@
             id="savings-input"
           />
           <span class="suffix" matTextSuffix>%</span>
-          <mat-error *ngIf="form.controls['savingsPercentage'].errors">{{
-            getSavingsFieldError()
-          }}</mat-error>
+          @if(form.controls['savingsPercentage'].errors) {
+          <mat-error>{{ getSavingsFieldError() }}</mat-error>
+          }
         </mat-form-field>
       </div>
     </mat-card-content>
     <mat-card-footer>
       <mat-card-actions align="end" class="actions">
-        <button mat-raised-button color="primary" type="submit" id="submit">Submit</button>
+        <button mat-raised-button color="primary" type="submit" id="submit">
+          Submit
+        </button>
         <button
           mat-raised-button
           color="warn"

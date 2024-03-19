@@ -1,12 +1,12 @@
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
+  { path: '', redirectTo: 'salary-splitter', pathMatch: 'full' },
   {
-    path: 'house-budget-shell',
+    path: 'house-budget',
     loadChildren: () =>
       import('@budgy/house-budget-shell').then((m) => m.houseBudgetShellRoutes),
   },
-  { path: '', redirectTo: 'salary-splitter', pathMatch: 'full' },
   {
     path: 'salary-splitter',
     loadComponent: () =>
